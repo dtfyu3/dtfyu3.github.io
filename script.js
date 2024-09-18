@@ -32,7 +32,7 @@ async function getWeather(coordinates) {
     const xhr = new XMLHttpRequest();
     const appid = '';
     // xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${appid}&units=metric&lang=ru`, true);
-    xhr.open('GET', `/api/weather?lat=${coordinates.lat}&lon=${coordinates.lon}`)
+    xhr.open('GET', `./api/weather?lat=${coordinates.lat}&lon=${coordinates.lon}`)
     xhr.send();
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
